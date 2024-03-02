@@ -20,6 +20,8 @@ export const signup=async(req,res,next)=>{
 }
 export const signin=async(req,res,next)=>{
     // console.log(req.body);
+    console.log(req.body);
+
         // try {
         //     const payload = { 
         //         userId: 2345, 
@@ -50,7 +52,7 @@ export const signin=async(req,res,next)=>{
            }
            const token=  Jwt.sign({id:user._id},process.env.JWTSECRETKEY);
            const {password,...data}=user._doc;
-           res.cookie("Access Token",token,{
+           res.cookie("access_Token",token,{
             httpOnly:true
            }).status(200).json(data)
 
