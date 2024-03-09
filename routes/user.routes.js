@@ -17,9 +17,9 @@ router.put("/sub/:id",verifyJwt,subscribeUser)
 router.put("/unsub/:id",verifyJwt,unsubscribeUser)
 
 //like video
-router.put("/like/:vidoeId",likeUser)
+router.put("/like/:videoId",verifyJwt,likeUser)
  
 //dislike a video
-router.put("/dislike/:videoId",dislikeUser)
+router.put("/dislike/:videoId",verifyJwt,dislikeUser)
 
 export default router;
