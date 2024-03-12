@@ -38,6 +38,6 @@ app.use((err,req,res,next)=>{
 
 app.listen(8500,()=>{
     connectDb();
-    console.log('server is listening at 8500');
+    console.log(`server is listening at 8500`);
 })
 export default app;

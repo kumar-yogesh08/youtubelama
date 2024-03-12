@@ -8,7 +8,7 @@ router.put("/:id",verifyJwt,updateUser)
 //delete user
 router.delete("/:id",verifyJwt,deleteUser)
 //get a user
-router.get("/:id",verifyJwt,getUser)
+router.get("/:id",getUser)
 
 //subscribe a user
 router.put("/sub/:id",verifyJwt,subscribeUser)
